@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  ## mysql
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/lixin_demo?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+
+  ## jackson
+  jackson:
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: true
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
